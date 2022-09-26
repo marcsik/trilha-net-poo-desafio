@@ -1,14 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 namespace DesafioPOO.Models
 {
     public abstract class Smartphone
     {
-        public string Numero { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama
+        //implementado.
+        protected string Numero { get; set; }
+        public string Modelo { get; set; }
+        public string Imei { get; set; }
+        public int Memoria { get; set; }
+        
 
-        public Smartphone(string numero)
+        public Smartphone(string numero, string modelo, string imei, int memoria)
         {
+            //implementado.
             Numero = numero;
-            // TODO: Passar os parâmetros do construtor para as propriedades
+            Modelo = modelo;
+            Imei = imei;
+            Memoria = memoria;
         }
 
         public void Ligar()
@@ -22,5 +34,6 @@ namespace DesafioPOO.Models
         }
 
         public abstract void InstalarAplicativo(string nomeApp);
+       
     }
 }
